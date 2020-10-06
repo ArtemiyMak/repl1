@@ -13,14 +13,16 @@ namespace GraphicsEditor
             Square square = new Square();
             
             square.Color = ConsoleColor.Red;
-            square.X = 7;
-            square.Y = 7;
-            square.secondX = 16;
-            square.secondY = 16;
+            square.X = 2;
+            square.Y = 2;
+            square.secondX = 6;
+            square.secondY = 6;
             square.Symbol = '*';
+            square.Length = 5;
             square.Draw();
             
             Rectangle rectangle = new Rectangle();
+            /*
             rectangle.Color = ConsoleColor.Cyan;
             rectangle.X = 4;
             rectangle.Y = 4;
@@ -28,7 +30,7 @@ namespace GraphicsEditor
             rectangle.secondY = 8;
             rectangle.Symbol = '№';
             rectangle.Draw();
-
+            */
             Console.SetCursorPosition(0, 30);
         }
     }
