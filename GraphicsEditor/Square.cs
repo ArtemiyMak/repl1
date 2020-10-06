@@ -22,6 +22,7 @@ namespace GraphicsEditor
                 Console.Write(Symbol);
                 Console.SetCursorPosition(Length + 1, l + 1);
                 Console.Write(Symbol);
+
             }
             Console.SetCursorPosition(X, Length + 2);
             for (int i = 0; i < Length; i++)
