@@ -12,9 +12,6 @@ namespace GraphicsEditor
         public char Symbol { get; set; }
         public int X { get; set; }
         public int Y { get; set; }
-        public int secondX { get; set; }
-        public int secondY { get; set; }
         public int Length { get; set; }
-        
     }
 }

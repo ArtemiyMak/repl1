@@ -7,13 +7,12 @@ using System.Threading.Tasks;
 
 namespace GraphicsEditor
 {
-    class Rectangle : Base
+    class Rectangle : Square
     {
         public int Width { get; set; }
         public int Height { get; set; }
         public void Draw()
-        {
-            
+        {   
             Console.ForegroundColor = Color;
             Console.SetCursorPosition(X, Y + 1);
             for (int i = 0; i < Width; i++)
