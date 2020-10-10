@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace GraphicsEditor
 {
-    class Square : Base
+    class Square : Base 
     {
         public void Draw()
         {
             Console.ForegroundColor = Color;
-            Console.SetCursorPosition(X, Y+1);
+            Console.SetCursorPosition(X, Y + 1);
             for (int i = 0; i < Length; i++)
             {
                 Console.Write(Symbol);

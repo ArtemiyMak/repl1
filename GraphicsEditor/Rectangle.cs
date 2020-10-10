@@ -15,20 +15,20 @@ namespace GraphicsEditor
         {
             
             Console.ForegroundColor = Color;
-            Console.SetCursorPosition(X, Y);
-            for (int i = X; i <= secondX; i++)
+            Console.SetCursorPosition(X, Y + 1);
+            for (int i = 0; i < Width; i++)
             {
                 Console.Write(Symbol);
             }
-            for (int l = 1; l < secondY - Y; l++)
+            for (int l = 0; l < Height - 1; l++)
             {
-                Console.SetCursorPosition(X, Y + l);
+                Console.SetCursorPosition(X, Y + l + 1);
                 Console.Write(Symbol);
-                Console.SetCursorPosition(secondX, Y + l);
+                Console.SetCursorPosition(Width + 1, Y + l + 1);
                 Console.Write(Symbol);
             }
-            Console.SetCursorPosition(X, secondY);
-            for (int i = X; i <= secondX; i++)
+            Console.SetCursorPosition(X, Height + 2);
+            for (int i = 0; i < Width; i++)
             {
                 Console.Write(Symbol);
             }
