@@ -11,6 +11,8 @@ namespace GraphicsEditor
         static void Main(string[] args)
         {
             Square square = new Square();
+            Rectangle rectangle = new Rectangle();
+            Triangle triangle = new Triangle();
             /*
             square.Color = ConsoleColor.Red;
             square.X = 2;
@@ -18,8 +20,7 @@ namespace GraphicsEditor
             square.Symbol = '*';
             square.Length = 5;
             square.Draw();
-            */
-            Rectangle rectangle = new Rectangle();
+            
             rectangle.Color = ConsoleColor.Cyan;
             rectangle.X = 2;
             rectangle.Y = 2;
@@ -27,6 +28,13 @@ namespace GraphicsEditor
             rectangle.Length = 6;
             rectangle.Symbol = '#';
             rectangle.Draw();
+            */
+            triangle.Color = ConsoleColor.Yellow;
+            triangle.X = 4;
+            triangle.Y = 16;
+            triangle.Symbol = '!';
+            triangle.Length = 10;
+            triangle.Draw();
 
             Console.SetCursorPosition(0, 30);
         }
