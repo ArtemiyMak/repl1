@@ -9,13 +9,12 @@ namespace GraphicsEditor
 {
     class Rectangle : Square
     {
-        public int Width { get; set; }
         public int Height { get; set; }
         public void Draw()
         {   
             Console.ForegroundColor = Color;
             Console.SetCursorPosition(X, Y + 1);
-            for (int i = 0; i < Width; i++)
+            for (int i = 0; i < Length; i++)
             {
                 Console.Write(Symbol);
             }
@@ -23,11 +22,11 @@ namespace GraphicsEditor
             {
                 Console.SetCursorPosition(X, Y + l + 1);
                 Console.Write(Symbol);
-                Console.SetCursorPosition(Width + 1, Y + l + 1);
+                Console.SetCursorPosition(Length + 1, Y + l + 1);
                 Console.Write(Symbol);
             }
             Console.SetCursorPosition(X, Height + 2);
-            for (int i = 0; i < Width; i++)
+            for (int i = 0; i < Length; i++)
             {
                 Console.Write(Symbol);
             }

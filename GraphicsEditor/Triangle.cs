@@ -23,7 +23,6 @@ namespace GraphicsEditor
                 Console.Write(Symbol);
                 Console.SetCursorPosition(X + Length - i - 1, Y - i);
                 Console.Write(Symbol);
-
             }
         }
     }
