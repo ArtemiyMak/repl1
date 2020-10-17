@@ -81,7 +81,7 @@ namespace GraphicsEditor
                                         int.TryParse(Console.ReadLine(), out int squareColor);
                                         Console.SetCursorPosition(0, 0);
                                         Console.WriteLine("                                                                                           ");
-                                        Console.WriteLine("                                                                                           ");
+                                        Console.WriteLine("                                                                                                                        ");
                                         Console.WriteLine("                                                                                           ");
                                         Console.SetCursorPosition(0, 0);
                                         if (squareColor < 0 || squareColor > 15)
@@ -100,33 +100,64 @@ namespace GraphicsEditor
                                     }
                                 case "2":
                                     {
-                                        Console.WriteLine("                                                                                           ");
-                                        Console.SetCursorPosition(0, 0);
-                                        Console.WriteLine("Введите X левого верхнего угла прямоугольника: ");
+                                        
+                                        Console.Write("Введите X левого верхнего угла прямоугольника: ");
                                         int.TryParse(Console.ReadLine(), out int rectangleX);
+                                        Console.SetCursorPosition(0, 0);
                                         Console.WriteLine("                                                                                           ");
                                         Console.SetCursorPosition(0, 0);
-                                        Console.WriteLine("Введите Y левого верхнего угла прямоугольника: ");
+                                        if (rectangleX < 0)
+                                        {
+                                            rectangleX = 0;
+                                        }
+
+                                        Console.Write("Введите Y левого верхнего угла прямоугольника: ");
                                         int.TryParse(Console.ReadLine(), out int rectangleY);
+                                        Console.SetCursorPosition(0, 0);
                                         Console.WriteLine("                                                                                           ");
                                         Console.SetCursorPosition(0, 0);
-                                        Console.WriteLine("Введите длину прямоугольника: ");
+                                        if (rectangleY < 0)
+                                        {
+                                            rectangleY = 0;
+                                        }
+
+                                        Console.Write("Введите длину прямоугольника: ");
                                         int.TryParse(Console.ReadLine(), out int rectangleLenght);
+                                        Console.SetCursorPosition(0, 0);
                                         Console.WriteLine("                                                                                           ");
                                         Console.SetCursorPosition(0, 0);
-                                        Console.WriteLine("Введите высоту прямоугольника: ");
+                                        if (rectangleX < 0)
+                                        {
+                                            rectangleX = 4;
+                                        }
+
+                                        Console.Write("Введите высоту прямоугольника: ");
                                         int.TryParse(Console.ReadLine(), out int rectangleHeight);
+                                        Console.SetCursorPosition(0, 0);
                                         Console.WriteLine("                                                                                           ");
                                         Console.SetCursorPosition(0, 0);
-                                        Console.WriteLine("Введите символ, которым будет выведен квадрат: ");
+                                        if (rectangleX < 0)
+                                        {
+                                            rectangleX = 4;
+                                        }
+
+                                        Console.Write("Введите символ, которым будет выведен квадрат: ");
                                         char.TryParse(Console.ReadLine(), out char rectangleSymbol);
+                                        Console.SetCursorPosition(0, 0);
                                         Console.WriteLine("                                                                                           ");
                                         Console.SetCursorPosition(0, 0);
+
                                         Console.WriteLine("Введите цвет квадрата");
-                                        Console.WriteLine("Black, DarkBlue, DarkGreen, DarkCyan, DarkRed, DarkMagenta, DarkYellow, Gray, DarkGray, Blue, Green, Cyan, Red, Magenta, Yellow, White");
-                                        ConsoleColor.TryParse(Console.ReadLine(), out ConsoleColor rectangleColor);
+                                        Console.WriteLine("Black(0), DarkBlue(1), DarkGreen(2), DarkCyan(3), DarkRed(4), DarkMagenta(5), DarkYellow(6), Gray(7)");
+                                        Console.Write("DarkGray(8), Blue(9), Green(10), Cyan(11), Red(12), Magenta(13), Yellow(14), White(15): ");
+                                        int.TryParse(Console.ReadLine(), out int rectangleColor);
+                                        Console.SetCursorPosition(0, 0);
+                                        Console.WriteLine("                                                                                           ");
+                                        Console.WriteLine("                                                                                                                      ");
+                                        Console.WriteLine("                                                                                           ");
+                                        Console.SetCursorPosition(0, 0);
                                         Rectangle rectangle = new Rectangle();
-                                        rectangle.Color = rectangleColor;
+                                        rectangle.Color = (ConsoleColor)rectangleColor;
                                         rectangle.X = rectangleX;
                                         rectangle.Y = rectangleY;
                                         rectangle.Symbol = rectangleSymbol;
@@ -136,29 +167,64 @@ namespace GraphicsEditor
                                         break;
                                     }
                                 case "3":
-                                    {
-                                        Console.WriteLine("                                                                                           ");
-                                        Console.WriteLine("Введите X левого нижнего угла треугольника: ");
+                                    { 
+                                        Console.Write("Введите X левого нижнего угла треугольника: ");
                                         int.TryParse(Console.ReadLine(), out int triangleX);
+                                        Console.SetCursorPosition(0, 0);
                                         Console.WriteLine("                                                                                           ");
                                         Console.SetCursorPosition(0, 0);
-                                        Console.WriteLine("Введите Y левого нижнего угла треугольника: ");
+                                        if (triangleX < 0)
+                                        {
+                                            triangleX = 0;
+                                        }
+
+                                        Console.Write("Введите Y левого нижнего угла треугольника: ");
                                         int.TryParse(Console.ReadLine(), out int triangleY);
+                                        Console.SetCursorPosition(0, 0);
                                         Console.WriteLine("                                                                                           ");
                                         Console.SetCursorPosition(0, 0);
-                                        Console.WriteLine("Введите длину треугольника: ");
+                                        if (triangleY < 0)
+                                        {
+                                            triangleY = 0;
+                                        }
+
+                                        Console.Write("Введите длину треугольника: ");
                                         int.TryParse(Console.ReadLine(), out int triangleLenght);
+                                        Console.SetCursorPosition(0, 0);
                                         Console.WriteLine("                                                                                           ");
                                         Console.SetCursorPosition(0, 0);
-                                        Console.WriteLine("Введите символ, которым будет выведен треугольник: ");
+                                        if (triangleLenght < (triangleY + 1) * 2 + 1)
+                                        {
+                                            triangleLenght = (triangleY + 1) * 2 - 2;
+                                        }
+
+                                        Console.Write("Введите символ, которым будет выведен треугольник: ");
                                         char.TryParse(Console.ReadLine(), out char triangleSymbol);
+                                        Console.SetCursorPosition(0, 0);
                                         Console.WriteLine("                                                                                           ");
                                         Console.SetCursorPosition(0, 0);
+                                        if (triangleSymbol == ' ')
+                                        {
+                                            triangleSymbol = '*';
+                                        }
+
                                         Console.WriteLine("Введите цвет треугольника: ");
-                                        Console.WriteLine("Black, DarkBlue, DarkGreen, DarkCyan, DarkRed, DarkMagenta, DarkYellow, Gray, DarkGray, Blue, Green, Cyan, Red, Magenta, Yellow, White");
-                                        ConsoleColor.TryParse(Console.ReadLine(), out ConsoleColor triangleColor);
+                                        Console.WriteLine("Black(0), DarkBlue(1), DarkGreen(2), DarkCyan(3), DarkRed(4), DarkMagenta(5), DarkYellow(6), Gray(7)");
+                                        Console.Write("DarkGray(8), Blue(9), Green(10), Cyan(11), Red(12), Magenta(13), Yellow(14), White(15): ");
+                                        int.TryParse(Console.ReadLine(), out int triangleColor);
+                                        Console.SetCursorPosition(0, 0);
+                                        Console.WriteLine("                                                                                           ");
+                                        Console.WriteLine("                                                                                                                      ");
                                         Console.WriteLine("                                                                                           ");
                                         Console.SetCursorPosition(0, 0);
+
+                                        Triangle triangle = new Triangle();
+                                        triangle.Color = (ConsoleColor)triangleColor;
+                                        triangle.X = triangleX;
+                                        triangle.Y = triangleY;
+                                        triangle.Symbol = triangleSymbol;
+                                        triangle.Length = triangleLenght;
+                                        triangle.Draw();
                                         break;
                                     }
                             }

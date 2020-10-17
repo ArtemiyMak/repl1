@@ -13,19 +13,19 @@ namespace GraphicsEditor
         public void Draw()
         {   
             Console.ForegroundColor = Color;
-            Console.SetCursorPosition(X, Y + 1);
+            Console.SetCursorPosition(X, Y);
             for (int i = 0; i < Length; i++)
             {
                 Console.Write(Symbol);
             }
-            for (int l = 0; l < Height - 1; l++)
+            for (int l = 2; l < Height; l++)
             {
-                Console.SetCursorPosition(X, Y + l + 1);
+                Console.SetCursorPosition(X, Y + l - 1);
                 Console.Write(Symbol);
-                Console.SetCursorPosition(Length + 1, Y + l + 1);
+                Console.SetCursorPosition(X + Length - 1, Y + l - 1);
                 Console.Write(Symbol);
             }
-            Console.SetCursorPosition(X, Height + 2);
+            Console.SetCursorPosition(X, Y + Height - 1);
             for (int i = 0; i < Length; i++)
             {
                 Console.Write(Symbol);
