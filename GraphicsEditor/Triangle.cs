@@ -9,6 +9,10 @@ namespace GraphicsEditor
 {
     class Triangle : Base
     {
+        public Triangle(ConsoleColor color, char symbol, int x, int y, int length) : base(color, symbol, x, y, length)
+        {
+
+        }
         public void Draw()
         {
             Console.ForegroundColor = Color;

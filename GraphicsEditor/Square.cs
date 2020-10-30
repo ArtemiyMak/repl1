@@ -8,8 +8,12 @@ namespace GraphicsEditor
 {
     class Square : Base 
     {
-        public void Draw()
+        public Square(ConsoleColor color, char symbol, int x, int y, int length) : base (color, symbol, x, y, length)
         {
+            
+        }
+        public void Draw()
+        {           
             Console.ForegroundColor = Color;
             Console.SetCursorPosition(X, Y);
             for (int i = 0; i < Length; i++)

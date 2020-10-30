@@ -10,6 +10,10 @@ namespace GraphicsEditor
     class Rectangle : Square
     {
         public int Height { get; set; }
+        public Rectangle(ConsoleColor color, char symbol, int x, int y, int length, int heigth) : base(color, symbol, x, y, length)
+        {
+            
+        }
         public void Draw()
         {   
             Console.ForegroundColor = Color;

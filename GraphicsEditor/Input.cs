@@ -88,13 +88,7 @@ namespace GraphicsEditor
                                         {
                                             squareColor = 15;
                                         }
-
-                                        Square square = new Square();
-                                        square.Color = (ConsoleColor)squareColor;
-                                        square.X = squareX;
-                                        square.Y = squareY;
-                                        square.Symbol = squareSymbol;
-                                        square.Length = squareLenght;
+                                        Square square = new Square((ConsoleColor)squareColor, squareSymbol, squareX, squareY, squareLenght);
                                         square.Draw();
                                         break;
                                     }
@@ -156,13 +150,7 @@ namespace GraphicsEditor
                                         Console.WriteLine("                                                                                                                      ");
                                         Console.WriteLine("                                                                                           ");
                                         Console.SetCursorPosition(0, 0);
-                                        Rectangle rectangle = new Rectangle();
-                                        rectangle.Color = (ConsoleColor)rectangleColor;
-                                        rectangle.X = rectangleX;
-                                        rectangle.Y = rectangleY;
-                                        rectangle.Symbol = rectangleSymbol;
-                                        rectangle.Length = rectangleLenght;
-                                        rectangle.Height = rectangleHeight;
+                                        Rectangle rectangle = new Rectangle((ConsoleColor)rectangleColor, rectangleSymbol, rectangleX, rectangleY, rectangleLenght, rectangleHeight);
                                         rectangle.Draw();
                                         break;
                                     }
@@ -218,12 +206,7 @@ namespace GraphicsEditor
                                         Console.WriteLine("                                                                                           ");
                                         Console.SetCursorPosition(0, 0);
 
-                                        Triangle triangle = new Triangle();
-                                        triangle.Color = (ConsoleColor)triangleColor;
-                                        triangle.X = triangleX;
-                                        triangle.Y = triangleY;
-                                        triangle.Symbol = triangleSymbol;
-                                        triangle.Length = triangleLenght;
+                                        Triangle triangle = new Triangle((ConsoleColor)triangleColor, triangleSymbol, triangleX, triangleY, triangleLenght);
                                         triangle.Draw();
                                         break;
                                     }
